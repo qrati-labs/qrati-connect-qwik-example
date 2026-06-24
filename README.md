@@ -1,38 +1,47 @@
-# Qwik + Vite
+# Qrati Connect — Qwik Example
 
-## Qwik in CSR mode
+Embeds [Qrati Connect](https://qrati.com) into a Qwik + Vite app using the
+framework-agnostic **web component** integration, with a host-controlled
+light/dark theme and a demo login for organizations that use custom auth.
 
-This starter is using a pure CSR (Client-Side Rendering) mode. This means, that the application is fully bootstrapped in the browser. Most of Qwik innovations however take advantage of SSR (Server-Side Rendering) mode.
+## Integration method: Web component
 
-```ts
-export default defineConfig({
-  plugins: [
-    qwikVite({
-      csr: true,
-    }),
-  ],
-})
+Qwik renders custom elements natively, so we load the element bundle from the
+CDN and drop `<qrati-connect>` into the markup:
+
+```tsx
+<qrati-connect organization-id={ORGANIZATION_ID} uid={user.userId} theme={theme} router="hash" />
 ```
 
-Use `npm create qwik@latest` to create a full production ready Qwik application, using SSR and [QwikCity](https://qwik.dev/docs/qwikcity/), our server-side metaframwork.
+The bundle (and its styles) are loaded once on mount — see `src/App.qwik`.
 
-## Usage
+## Run it
 
 ```bash
-$ npm install # or pnpm install or yarn install
+bun install
+cp .env.example .env   # optional — sensible defaults are baked in
+bun dev
 ```
 
-Learn more on the [Qwik Website](https://qwik.dev) and join our community on our [Discord](https://qwik.dev/chat)
+## Configuration
 
-## Available Scripts
+Set these in `.env` (all optional; the demo org is used as a fallback):
 
-In the project directory, you can run:
+| Variable                 | Description                                                       |
+| ------------------------ | ----------------------------------------------------------------- |
+| `VITE_ORGANIZATION_ID`   | Your Qrati organization ID                                        |
+| `VITE_QRATI_SCRIPT_URL`  | CDN URL of the web-component bundle (`element/web.es.js`)          |
+| `VITE_API_ENDPOINT`      | Demo-login endpoint for custom-auth orgs. Leave empty to skip it. |
 
-### `npm run dev`
+## Demo auth
 
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+Orgs with custom auth expect a known user. The login form (`src/auth.ts`) derives
+a stable `uid` from the email, optionally POSTs to `VITE_API_ENDPOINT`, then
+renders the widget with `uid` / `fname` / `lname` so the user is recognized.
 
-### `npm run build`
+## Other integration methods
 
-Builds the app for production to the `dist` folder.<br>
+- **React component** — `import { QratiConnect }` (see the React/Next/Preact examples).
+- **Embed (no-code)** — single `<script>` tag with `data-*` attributes (see the Vanilla JS / Marko / Ember examples).
+
+Docs: <https://www.npmjs.com/package/@qratilabs/qrati-connect>
