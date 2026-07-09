@@ -15,6 +15,7 @@
     "@types/node": "25.3.5",
     "serve": "14.2.6",
     "typescript": "5.9.3",
-    "vite": "8.1.4"
+    "vite": "8.1.4",
+    "wrangler": "^4.107.1"
   }
 }
