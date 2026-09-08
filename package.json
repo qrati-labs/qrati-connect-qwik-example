@@ -10,7 +10,7 @@
     "deploy": "pnpm run build && wrangler deploy"
   },
   "dependencies": {
-    "@builder.io/qwik": "1.19.1",
+    "@builder.io/qwik": "1.20.0",
     "vanilla-cookieconsent": "3.1.0"
   },
   "devDependencies": {
