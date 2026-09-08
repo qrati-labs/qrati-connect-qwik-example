@@ -1,5 +1,9 @@
 # Qrati Connect — Qwik Example
 
+[![Qrati Connect — embeddable event photo galleries](public/qrati-connect-og.png)](https://qrati.com/connect)
+
+Embed a resumable live event photo gallery in Qwik with guest uploads, full-screen lightbox, emoji reactions, and contest leaderboards. [Explore Qrati Connect](https://qrati.com/connect) or [view the live Qwik example](https://qrati.com/connect/qwik-example).
+
 Embeds [Qrati Connect](https://qrati.com) into a Qwik + Vite application using the
 framework-agnostic **web component** (`<qrati-connect>`), with host-controlled
 light/dark theme synchronization, full SEO optimization, resumable execution, and zero backend configuration.
