@@ -17,6 +17,7 @@ export const App = component$(() => {
       (localStorage.getItem('qc-theme') as 'light' | 'dark') ||
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
     document.documentElement.setAttribute('data-theme', theme.value);
+    document.documentElement.classList.toggle('dark', theme.value === 'dark');
 
     const styleUrl = QRATI_SCRIPT_URL.replace(/\/web\.es\.js$/, '/styles.css');
     if (!document.querySelector(`link[href="${styleUrl}"]`)) {
@@ -31,6 +32,7 @@ export const App = component$(() => {
   const toggleTheme = $(() => {
     theme.value = theme.value === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', theme.value);
+    document.documentElement.classList.toggle('dark', theme.value === 'dark');
     localStorage.setItem('qc-theme', theme.value);
   });
 
