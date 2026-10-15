@@ -41,7 +41,7 @@ Fix the existing invalid CSS selector in a separate focused change, and consider
 
 ## PR
 
-Pending creation. No merge or deploy performed.
+[PR #1](https://github.com/qrati-labs/qrati-connect-qwik-example/pull/1) is open at head `e69837326a5702fbe54b399ebcf57447a58220ab`. GitGuardian passed; the Cloudflare Workers build check was pending at the last read. No merge or deploy performed.
 
 ## Sources
 
