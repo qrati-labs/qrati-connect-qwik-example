@@ -23,11 +23,11 @@ No regression test was warranted because no defect was confirmed. No tests/build
 ## Timing
 
 - Start: `2026-10-18T20:50:39Z` (2026-10-19 02:20:39 IST)
-- End: `2026-10-18T20:52:41Z` (2026-10-19 02:22:41 IST), at report/index/PR verification
+- End: `2026-10-18T20:52:52Z` (2026-10-19 02:22:52 IST), at remote branch and PR verification
 - Preflight: `00:00:23` (provided by the pre-run script)
 - Workflow selection, source trace, and falsification: `00:00:54` (elapsed wall-clock remainder to the recorded audit disposition)
-- Documentation, diff hygiene, push, PR creation, and readback: `00:00:45` (from audit disposition at `20:51:56Z` through PR verification)
-- Total elapsed: `00:02:02`
+- Documentation, diff hygiene, push, and PR verification: `00:00:56` (from audit disposition at `20:51:56Z` through remote verification)
+- Total elapsed: `00:02:13`
 
 
 ## Delivery
