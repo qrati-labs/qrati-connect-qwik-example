@@ -23,12 +23,13 @@ No regression test was warranted because no defect was confirmed. No tests/build
 ## Timing
 
 - Start: `2026-10-18T20:50:39Z` (2026-10-19 02:20:39 IST)
-- End: `2026-10-18T20:51:56Z` (2026-10-19 02:21:56 IST)
+- End: `2026-10-18T20:52:24Z` (2026-10-19 02:22:24 IST), at PR readback
 - Preflight: `00:00:23` (provided by the pre-run script)
-- Workflow selection, source trace, and falsification: `00:00:54` (elapsed wall-clock remainder)
-- Documentation, diff hygiene, publication: tracked in the subsequent delivery phase; not included in this audit interval.
-- Audit total through disposition: `00:01:17`
+- Workflow selection, source trace, and falsification: `00:00:54` (elapsed wall-clock remainder to the recorded audit disposition)
+- Documentation, diff hygiene, push, PR creation, and PR readback: `00:00:28` (from audit disposition at `20:51:56Z` to PR readback)
+- Total elapsed: `00:01:45`
+
 
 ## Delivery
 
-Report-only documentation PR. No issue needed. Regression-test command: N/A (no test authored). `git diff --check` is the only allowed patch-hygiene check; no runtime tests were run.
+Report-only documentation PR: https://github.com/qrati-labs/qrati-connect-qwik-example/pull/10. PR was open and mergeable on readback, with the expected report and index files and no closing issue references. The Cloudflare Workers Build check was still in progress at readback; no final CI conclusion is claimed. No issue needed. Regression-test command: N/A (no test authored). `git diff --check` is the only allowed patch-hygiene check; no runtime tests were run.
