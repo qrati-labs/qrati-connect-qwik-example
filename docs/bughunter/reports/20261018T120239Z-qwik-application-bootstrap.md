@@ -39,5 +39,6 @@ Measured using UTC timestamps from the pre-run record and host clock (IST = UTC+
 
 - Run start: 2026-10-18 12:02:39 UTC / 17:32:39 IST.
 - Preflight: 00:00:23 (pre-run script output).
-- Audit and delivery: record final measured duration and end timestamp immediately before publication.
-- Total wall-clock duration: record final measured duration and end timestamp immediately before publication.
+- Audit and delivery: 00:02:53 (run start through PR readback, less the preflight duration).
+- Total wall-clock duration: 00:03:16, 2026-10-18 12:05:55 UTC / 17:35:55 IST.
+- PR creation/readback succeeded at the recorded end time; repository and CI status are snapshot values at that point.
