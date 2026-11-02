@@ -1,5 +1,6 @@
 # BugHunter reports
 
+- [2026-10-18 — Qwik example page shell and gallery entry](reports/20261018T211739Z-qwik-example-page-shell.md) — bounded report-only audit; no confirmed defect.
 | Date (UTC) | Workflow | Disposition | Report |
 | --- | --- | --- | --- |
 | 2026-10-18 | Qwik example FAQ disclosures | Report-only; no confirmed defect | [20261018T205038Z-qwik-faq-disclosures.md](reports/20261018T205038Z-qwik-faq-disclosures.md) |
