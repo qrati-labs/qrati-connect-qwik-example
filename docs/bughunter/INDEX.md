@@ -1,3 +1,6 @@
+# BugHunter reports
+
+- [20261017T173339Z — Qwik host theme storage failure](reports/20261017T173339Z-qwik-theme-storage.md) — identified unguarded localStorage access that can abort gallery bootstrap.
 # BugHunter Reports
 
 - [2026-10-17 — Qwik example worker routing](reports/2026-10-17T093648Z-qwik-worker-routing.md) — report-only; no confirmed defect.
